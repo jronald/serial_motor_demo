@@ -72,7 +72,7 @@ class MotorDriver(Node):
         print(f"Connecting to port {self.serial_port} at {self.baud_rate}.")
         self.conn = serial.Serial(self.serial_port, self.baud_rate, timeout=1.0)
         print(f"Connected to {self.conn}")
-        
+        time.sleep(0.5)  # Give Arduino time to initialize serial
 
         
 
